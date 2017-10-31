@@ -19,7 +19,7 @@ public abstract class AbstractLifeCycleManager {
     public abstract void start() throws Exception;
     public abstract void stop() throws Exception;
 
-    Container createContainer(ContainerConfiguration containerConfig, RoleConfiguration[] roles, RpcFactory rpcFactory, ServiceDirectoryFactory sdFactory) throws Exception {
+    Container createContainer(ContainerConfiguration containerConfig, RoleConfiguration[] roles, RpcFactory<?> rpcFactory, ServiceDirectoryFactory sdFactory) throws Exception {
         return  new ContainerUtils().createContainer(containerConfig, roles, rpcFactory, sdFactory);
     }
 
